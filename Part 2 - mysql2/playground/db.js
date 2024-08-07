@@ -13,7 +13,7 @@ const getAllNotes = async () => {
   return rows
 }
 
-// (1)
+// prepared statement
 export async function getNote(id) {
   const [rows] = await pool.query(
     `

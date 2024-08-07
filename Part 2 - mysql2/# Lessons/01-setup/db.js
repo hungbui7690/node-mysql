@@ -1,6 +1,7 @@
-import mysql from 'mysql2/promise' // (1) Get the client
+// 1. Get the client
+import mysql from 'mysql2/promise'
 
-// (2) Create the connection to database
+// 2. Create the connection to database
 const connection = await mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -8,7 +9,7 @@ const connection = await mysql.createConnection({
   database: 'notes_app',
 })
 
-// (3) run simple query
+// 3. run simple query
 try {
   const [results, fields] = await connection.query('SELECT * FROM NOTES')
 
